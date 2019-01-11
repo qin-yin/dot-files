@@ -1,2 +1,2 @@
 # dot-files
-repo for config files
+repo for peronsal config files
