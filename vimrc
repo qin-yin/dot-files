@@ -78,5 +78,8 @@ colorscheme solarized
 " paren highlights
 set showmatch
 
+" bash-like tab autocomplete
+set wildmode=longest,list 
+
 " set rust format to run when saving buffer
 let g:rustfmt_autosave = 1
