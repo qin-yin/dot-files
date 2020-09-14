@@ -66,6 +66,10 @@ set ignorecase
 set smartcase
 map <Leader><space> :noh<CR>
 
+" no backup files
+set nobackup
+set noswapfile
+
 " <F2> to bring up file explorer with current file highlighted.
 map <F2> :let g:f2_filename=expand("%:t")<CR>:e %:h<CR>10j:call search('^\V' . g:f2_filename, 'c')<CR>
 
