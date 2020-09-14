@@ -62,6 +62,7 @@ endif
 " highlight things we find with search
 set incsearch
 set hlsearch
+set ignorecase
 set smartcase
 map <Leader><space> :noh<CR>
 
