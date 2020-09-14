@@ -87,3 +87,16 @@ set wildmode=longest,list
 
 " set rust format to run when saving buffer
 let g:rustfmt_autosave = 1
+
+" keep all buffers
+set hidden
+
+" persistent undo
+let &undodir=$HOME . "/.vim_undo"
+
+if !isdirectory(&undodir)
+    :call mkdir(&undodir)
+endif
+
+set undolevels=1000
+set undoreload=10000
