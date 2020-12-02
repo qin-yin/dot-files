@@ -20,7 +20,7 @@ floating_modifier $mod
 bindsym $mod+Return exec gnome-terminal
 
 # kill focused windows
-bindsym $mod+d exec dmenu_ru
+bindsym $mod+d exec dmenu_run
 
 # change focus
 bindsym $mod+$left focus left
@@ -41,7 +41,7 @@ bindsym $mod+minus split v
 # fullscreen
 bindsym $mod+f fullscreen toggle
 
-# Move whole workspace to next outpu
+# Move whole workspace to next output
 bindsym $mod+m move workspace to output right
 
 # Define names for default workspaces.

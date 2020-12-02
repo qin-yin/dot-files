@@ -106,8 +106,8 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # fzf Ctrl+R
-if [ -f ~/.fzf ]; then
-    . ~/.fzf
+if [ -f ~/.fzf_bashrc ]; then
+    . ~/.fzf_bashrc
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -122,3 +122,5 @@ if ! shopt -oq posix; then
 fi
 
 stty -ixon
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
