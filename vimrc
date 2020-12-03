@@ -57,11 +57,6 @@ let mapleader = ","
 set ve+=onemore
 :nnoremap $ $l
 
-" use rg for ack
-if executable('rg')
-    let g:ackprg = 'rg --vimgrep'
-endif
-
 " highlight things we find with search
 set incsearch
 set hlsearch
@@ -76,20 +71,11 @@ set noswapfile
 " <F2> to bring up file explorer with current file highlighted.
 map <F2> :let g:f2_filename=expand("%:t")<CR>:e %:h<CR>10j:call search('^\V' . g:f2_filename, 'c')<CR>
 
-" enables Solarized-vim
-syntax enable
-set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
-
 " paren highlights
 set showmatch
 
 " bash-like tab autocomplete
 set wildmode=longest,list 
-
-" set rust format to run when saving buffer
-let g:rustfmt_autosave = 1
 
 " keep all buffers
 set hidden
@@ -103,3 +89,26 @@ endif
 
 set undolevels=1000
 set undoreload=10000
+
+""""" Ack """""
+if executable('rg')
+    let g:ackprg = 'rg --vimgrep'
+endif
+
+""""" Solarized-vim """""
+syntax enable
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
+
+""""" Rust """""
+let g:rustfmt_autosave = 1
+let g:ycm_language_server =
+\ [
+\   {
+\     'name': 'rust',
+\     'cmdline': ['rust-analyzer'],
+\     'filetypes': ['rust'],
+\     'project_root_files': ['Cargo.toml']
+\   }
+\ ]
