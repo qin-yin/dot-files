@@ -124,3 +124,6 @@ fi
 stty -ixon
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Use Caps lock as Ctrl
+setxkbmap -option caps:ctrl_modifier
